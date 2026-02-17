@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Penguins SWF</title>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+
+<body>
+
+<div id="flash-container" style="width:800px;height:600px;"></div>
+
+<script>
+window.addEventListener("load", () => {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    
+    document.getElementById("flash-container").appendChild(player);
+
+    player.load({
+        url: "penguins.swf",
+        autoplay: true
+    });
+});
+</script>
+
+</body>
+</html>
